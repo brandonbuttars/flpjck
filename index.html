@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=11">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Weave FlpJck</title>
+  <!-- web app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- app icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./public/icons/icon-57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./public/icons/icon-72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./public/icons/icon-114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./public/icons/icon-144.png">
+  <!-- favicon -->
+  <link rel="icon" href="./public/icons/favicon.ico">
+  <!-- styles -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>FlpJck</h1>
+      <div>
+        <a href="https://github.com/brandonbuttars/flpjck" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </header>
+    <main>
+      <img id="pancake" src="./public/images/pancakes.png" />
+      <div id="instructions">
+        <h2>Weave "Revenge of the Pancakes" Challenge</h2>
+        <p>Enter in the number of tests as a number followed but test strings on separate lines using only + and -
+          characters.
+          Remove any preceding and trailing whitespace including empty lines. See an example below.</p>
+      </div>
+      <label>Example</label>
+      <pre>5
+-
+-+
++--
++++
+--+-</pre>
+
+      <div class="grid">
+        <div id="inputContainer">
+          <label for="input">Input</label>
+          <textarea id="input" placeholder="Enter your test data here."></textarea>
+          <div id="triggerContainer">
+            <button id="trigger" type="button">Run Tests</button>
+          </div>
+        </div>
+        <div id="outputContainer">
+          <label>Output</label>
+          <div id="output">
+            <div class="helpful">Please enter some input and click the "Run Tests" button.</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      Cooked up by Brandon Buttars | <a href="https://github.com/brandonbuttars/flpjck" target="_blank">GitHub</a>
+    </footer>
+  </div>
+
+  <!-- scripts -->
+  <script src="./demo.js" type="module"></script>
+</body>
+
+</html>

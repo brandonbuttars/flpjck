@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|PT+Mono|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i');
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+html { font-size: 10px }
+
+body {
+  font-size: 1.6rem;
+  color: rgb(128, 82, 63);
+  height: 100%;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-rows: 8rem 1fr 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+
+header {
+  background: #D4934F;
+  border-bottom: 1rem solid #F4EBCE;
+  padding: 0 4rem;
+  box-shadow: 0 0.5rem 0 rgba(0,0,0,0.025);
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  color: #7F3B24;
+  text-shadow: 0.2rem 0.2rem 0 rgba(243, 245, 209, 0.5);
+}
+header h1 { justify-self: start }
+header div { justify-self: end; font-size: 3rem }
+header a { color: #7F3B24; text-decoration: none }
+main {
+  padding: 4rem;
+  overflow: auto;
+  max-height: 100%;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+}
+footer {
+  background: #F4EBCE;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #B25D34;
+  z-index: 2;
+  border-top: 0.1rem solid rgb(216, 208, 180);
+  box-shadow: 0 -0.5rem 0 rgba(0,0,0,0.025);
+}
+
+footer a {
+  color: #B25D34;
+  text-decoration: none;
+  border-bottom: 0.1rem dotted #D7D0B7;
+}
+
+footer a:hover { color: #AD4E33 }
+
+#pancake {
+  display: block;
+  position: fixed;
+  top: 8rem;
+  right: 6rem;
+  z-index: -1;
+  width: 40rem;
+}
+
+#instructions { margin: 0 42rem 0 0 }
+
+@media screen and (max-width: 900px) {
+  #pancake { width: 30rem }
+
+  #instructions {
+    margin: 0 32rem 0 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #pancake {
+    width: 100%;
+    max-width: 40rem;
+    position: static;
+    top: initial;
+    right: initial;
+    margin: -4rem auto 0;
+  }
+
+  #instructions { margin: 0 }
+}
+
+h1 {
+  font-size: 4.8rem;
+  line-height: 7rem;
+  font-family: Bangers, Raleway, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  color: #773F2A;
+  font-family: Bangers, Raleway, Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+p { margin: 0 0 2em }
+
+pre {
+  border: 0.1rem solid #DDD0AD;
+  background: #F3EBD1;
+  padding: 2rem;
+  margin: 0 0 3rem;
+  width: calc(50% - 1.5rem);
+  font-family: 'PT Mono', monospace;
+}
+
+@media screen and (max-width: 900px) {
+  pre { width: 100% }
+}
+
+label {
+  display: inline-block;
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  color: #773F2A;
+  font-family: Bangers, Raleway, Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  height: 10em;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: 'PT Mono', monospace;
+  border: 0.1rem solid #DDD0AD;
+  background: rgba(243, 235, 209, 0.25);
+  display: block;
+  outline: none;
+  color: #B6703F;
+}
+
+textarea:focus {
+  color: #773F2A;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb(182, 172, 145);
+  font-style: italic;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgb(182, 172, 145);
+  font-style: italic;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgb(182, 172, 145);
+  font-style: italic;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgb(182, 172, 145);
+  font-style: italic;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+button {
+  display: block;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  font-size: 3rem;
+  width: 100%;
+  background: #CB955B;
+  border: 0;
+  border-bottom: 1rem solid #F3EBD1;
+  color: #7F3B24;
+  text-shadow: 0.2rem 0.2rem 0 rgba(243, 245, 209, 0.5);
+  font-family: Bangers, Raleway, Arial, Helvetica, sans-serif;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+button:active {
+  background: #CC8748;
+  margin: 2.2rem 0 2rem;
+  border-bottom: 0.8rem solid #F3EBD1;
+}
+
+#output, .output {
+  font-size: 1.6rem;
+  font-family: 'PT Mono', monospace;
+  color: #773F2A;
+}
+
+.helpful {
+  color: #B96A3A;
+  font-style: italic;
+}
+
+.error {
+  font-style: italic;
+  color: rgb(233, 56, 7);
+}
+
+.msg { margin: 0 0 1rem }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .grid { display: initial }
+}
