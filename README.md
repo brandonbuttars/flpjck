@@ -23,6 +23,31 @@ To run this code locally you can:
 1. Open the `index.html` file directly in a browser.  If you have any issues with `CORS` try option 2.
 2. You can spin up a BrowserSync instance by installing all of the build dependencies by running `npm i`.  Once the dependencies are installed, run `npm start` to start the server.  Your default browser should open automatically with a running instance at `http://localhost:1111`.
 
+### Without UI
+
+To run the code without a UI and to manually input a `String`, see the following code:
+
+```
+import FlpJck from './src/index.js';
+
+const str = 5
+-
+-+
++-
++++
+--+-`;
+
+FlpJck.run(str);
+```
+
+Include the script in an HTML page.  You will need to use the module syntax:
+
+```
+<script src="./demo.js" type="module"></script>
+```
+
+You should see the results appear in your browser console.
+
 ## Code Details
 
 ### src/index.js

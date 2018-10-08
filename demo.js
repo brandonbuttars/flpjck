@@ -12,9 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     elo.scrollIntoView({ behavior: 'smooth' });
     if (eli.value) {
-      FlpJck.run(eli.value);
+      FlpJck.run(eli.value, true);
     } else {
       elo.innerHTML = `<div class="helpful">${txt.error.output.empty}</div>`;
     }
   });
 });
+
+// Manual Run
+// const test = `5
+// -
+// -+
+// +-
+// +++
+// --+ -`;
+
+// FlpJck.run(test);

@@ -6,14 +6,11 @@ import Stck from './stck.js';
 
 const FlpJck = {
   // run entire input string through process
-  run: async (str, output = true, console = false) => {
+  run: async (str, output = false) => {
     const obj = await cnvrt(str);
     await vld8.all(obj, function(data) {
       if (output) FlpJck.output(obj, data);
-      if (console) {
-        console.log('Object:', obj);
-        console.log('Tests:', data);
-      }
+      if (!output) FlpJck.console(obj, data);
     });
   },
 
@@ -22,11 +19,22 @@ const FlpJck = {
     if (elo) elo.innerHTML = '';
     if (data.errors) {
       if (elo) output.htmlError(elo, data.errors);
-      // Do something with error messages.
     } else {
       FlpJck.fix(obj).then(results => {
         results.forEach(r => {
           if (elo) output.html(elo, r);
+        });
+      });
+    }
+  },
+
+  console: async (obj, data) => {
+    if (data.errors) {
+      console.error('Errors:', data.errors);
+    } else {
+      FlpJck.fix(obj).then(results => {
+        results.forEach(r => {
+          console.log(output.case(r));
         });
       });
     }

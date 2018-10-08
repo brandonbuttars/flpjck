@@ -2,6 +2,10 @@ import txt from './txt.js';
 
 const output = {
   case: (arr) => `Case #${arr[0]}: ${arr[1]}`,
+  console: (arr) => {
+    console.log('Object:', arr[0]);
+    console.log('Test Results:', arr[1]);
+  },
   html: (el, arr, style = 'case') => {
     // let el = document.getElementById(id);
     if (el) el.insertAdjacentHTML('beforeend', `<div id="case-${arr[0]}" class="output">${output[style](arr)}</div>`);
