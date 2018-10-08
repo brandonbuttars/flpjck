@@ -1,3 +1,5 @@
+<img src="./public/images/pancakes.png" style="width: 50%">
+
 # FlpJck
 
 FlpJck is a repo that shows solution for Weave's __"Revenge of the Pancakes"__ code challenge.
