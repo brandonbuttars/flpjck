@@ -16,7 +16,8 @@ const txt = {
       max: `One or more ${lbls.string.p} exceed the maximum of ${cnfg.data.max} characters.`
     },
     output: {
-      html: 'Input Errors'
+      html: 'Input Errors',
+      empty: 'Please enter some input and click the "Run Tests" button.'
     }
   }
 }

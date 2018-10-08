@@ -39,6 +39,7 @@ header {
   align-items: center;
   color: #7F3B24;
   text-shadow: 0.2rem 0.2rem 0 rgba(243, 245, 209, 0.5);
+  position: relative;
 }
 header h1 { justify-self: start }
 header div { justify-self: end; font-size: 3rem }
@@ -49,6 +50,7 @@ main {
   max-height: 100%;
   -webkit-overflow-scrolling: touch;
   z-index: 1;
+  position: relative;
 }
 footer {
   background: #F4EBCE;
@@ -59,6 +61,7 @@ footer {
   z-index: 2;
   border-top: 0.1rem solid rgb(216, 208, 180);
   box-shadow: 0 -0.5rem 0 rgba(0,0,0,0.025);
+  position: relative;
 }
 
 footer a {

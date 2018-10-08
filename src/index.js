@@ -1,8 +1,8 @@
 import cnfg from './cnfg.js';
 import cnvrt from './cnvrt.js';
 import vld8 from './vld8.js';
-import Stck from './stck.js';
 import output from './output.js';
+import Stck from './stck.js';
 
 const FlpJck = {
   // run entire input string through process

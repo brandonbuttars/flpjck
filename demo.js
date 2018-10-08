@@ -1,5 +1,6 @@
 import FlpJck from './src/index.js';
 import cnfg from './src/cnfg.js';
+import txt from './src/txt.js';
 
 // UI Initializer
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   trgr.addEventListener(cnfg.html.event, (e) => {
     e.preventDefault();
     elo.scrollIntoView({ behavior: 'smooth' });
-    if (eli.value) FlpJck.run(eli.value);
+    if (eli.value) {
+      FlpJck.run(eli.value);
+    } else {
+      elo.innerHTML = `<div class="helpful">${txt.error.output.empty}</div>`;
+    }
   });
 });
