@@ -30,7 +30,7 @@ To run the code without a UI and to manually input a `String`, see the following
 ```
 import FlpJck from './src/index.js';
 
-const str = 5
+const str = `5
 -
 -+
 +-
