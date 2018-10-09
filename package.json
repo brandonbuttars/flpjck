@@ -4,16 +4,35 @@
   "description": "Code Challenge for a job at Weave.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava",
     "start": "browser-sync start --config ./bs-config.js"
   },
   "author": "Brandon Buttars <brandonbuttars@gmail.com>",
   "private": true,
   "devDependencies": {
+    "ava": "1.0.0-beta.8",
     "browser-sync": "^2.24.7"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/brandonbuttars/flpjck"
+  },
+  "dependencies": {
+    "esm": "^3.0.84"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ],
+    "babel": false,
+    "extensions": [
+      "js",
+      "mjs"
+    ],
+    "verbose": true,
+    "concurrency": 5,
+    "files": [
+      "tests/**/*.js"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 export const testCase = {
   min: 1,
-  max: 5
+  max: 100
 }
 
 export const data = {

@@ -3,15 +3,17 @@ export const arr = [
   '-+',
   '+-',
   '+++',
-  '--+-'
+  '--+-',
+  '++++----'
 ];
 
-export const str = `5
+export const str = `6
 -
 -+
 +-
 +++
---+-`;
+--+-
+++++----`;
 
 const tests = { arr, str };
 
