@@ -1,6 +1,6 @@
 const ut = {
   // to: (val, typ) => typeof val === typ,
-  isNum: (val) => !isNaN(+val) && !Array.isArray(val),
+  isNum: (val) => !isNaN(+val),
   gte: (val, min) => +val >= +min,
   lte: (val, max) => +val <= +max,
   tween: (val, min = 1, max) => +val >= +min && +val <= +max,
